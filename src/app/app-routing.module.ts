@@ -3,13 +3,41 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: '',
+    redirectTo: 'inicio',
+    pathMatch: 'full'
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    path: 'inicio',
+    loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'formulario',
+    loadChildren: () => import('./pages/formulario/formulario.module').then( m => m.FormularioPageModule)
+  },
+  {
+    path: 'idocente',
+    loadChildren: () => import('./pages/idocente/idocente.module').then( m => m.IdocentePageModule)
+  },
+  {
+    path: 'ialumno',
+    loadChildren: () => import('./pages/ialumno/ialumno.module').then( m => m.IalumnoPageModule)
+  },
+  {
+    path: 'logdocente',
+    loadChildren: () => import('./pages/logdocente/logdocente.module').then( m => m.LogdocentePageModule)
+  },
+  {
+    path: 'logalumno',
+    loadChildren: () => import('./pages/logalumno/logalumno.module').then( m => m.LogalumnoPageModule)
+  },
+  {
+    path: 'bienvenida',
+    loadChildren: () => import('./pages/bienvenida/bienvenida.module').then( m => m.BienvenidaPageModule)
+  },
+  {
+    path: 'pinicio',
+    loadChildren: () => import('./pages/pinicio/pinicio.module').then( m => m.PinicioPageModule)
   },
 ];
 
